@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trivy-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trivy-demo
+  template:
+    metadata:
+      labels:
+        app: trivy-demo
+    spec:
+      containers:
+      - name: trivy-demo
+        image: trivy-demo:latest
+        ports:
+        - containerPort: 80
+        # Missing security context

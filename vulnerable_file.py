@@ -6,8 +6,8 @@ def execute_user_command():
     # Vulnerable: Using eval on user input
     eval(user_input)
 
-def run_system_command(
- user_input = input("Enter a system command: ")
+def run_system_command():
+    user_input = input("Enter a system command: ")
     # Vulnerable: Using subprocess with shell=True
     subprocess.call(f"echo {user_input}", shell=True)
 
