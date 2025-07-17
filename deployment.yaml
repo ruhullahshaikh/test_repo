@@ -12,6 +12,8 @@ spec:
       labels:
         app: trivy-demo
     spec:
+      securityContext:
+        runAsNonRoot: true
       containers:
       - name: trivy-demo
         image: trivy-demo:latest
