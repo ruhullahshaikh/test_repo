@@ -1,4 +1,6 @@
 flask==1.0
-django==2.2
+django==4.2.27
 python-dotenv==1.0tavily
 google-genai
+sqlparse>=0.5.4 # not directly required, pinned by Snyk to avoid a vulnerability
+werkzeug>=3.1.4 # not directly required, pinned by Snyk to avoid a vulnerability
