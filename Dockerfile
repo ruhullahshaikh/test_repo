@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.14.3
 
 # Missing specific tag for base image (uses 'latest')
 RUN pip install -r requirements.txt
